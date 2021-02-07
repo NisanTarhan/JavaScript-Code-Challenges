@@ -54,6 +54,11 @@ class BookWithClass {
         this.numCopies = numCopies;
     }
 
+    //Getter Functions
+    get availability() {
+        return this.getAvailability();
+    }
+
     getAvailability() {
         if (this.numCopies === 0) return "Out of stock";
         if (this.numCopies < 10) return "Low stock"
@@ -70,9 +75,9 @@ class BookWithClass {
 }
 
 const DeepWorkWithClass = new BookWithClass("Deep Work", "Carl Newport", "323", 100);
-console.log(DeepWorkWithClass.getAvailability());
+console.log(DeepWorkWithClass.availability);
 DeepWork.restock(12);
-console.log(DeepWorkWithClass.getAvailability());
+console.log(DeepWorkWithClass.availability);
 DeepWork.sell(17);
-console.log(DeepWorkWithClass.getAvailability());
+console.log(DeepWorkWithClass.availability);
 
