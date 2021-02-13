@@ -10,6 +10,7 @@
     To get data for five users. Your solution should also use async/await.
 */
 
+//Solution 1
 const GET_USER_URL = "https://randomuser.me/api/?results=5";
 
 getUserList()
@@ -34,3 +35,17 @@ async function getUsers(url) {
     let usersData = await data.json();
     return usersData.results
 }
+
+//Solution 2
+// async function getUsers() {
+//     let people = await fetch("https://randomuser.me/api/?results=5");
+//     let data = await people.json();
+//     const userList = document.querySelector("#userList");
+//     data.results.forEach(person => {
+//         let image = document.createElement("img");
+//         image.src = person.picture.medium;
+//         userList.appendChild(image);
+//     })
+// }
+
+// getUsers()
